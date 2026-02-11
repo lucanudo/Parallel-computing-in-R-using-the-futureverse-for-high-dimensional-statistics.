@@ -1,4 +1,4 @@
-# Parallel Computing with R: Futureverse & High-Dimensional Statistics
+# Parallel Computing with R using the Futureverse
 
 This repository contains my final exam project for the course *Parallel Computing with R using the Futureverse*, completed during my academic experience at ENSAI – École Nationale de la Statistique et de l’Analyse de l’Information (Rennes, France).
 
@@ -13,31 +13,13 @@ It covers:
 - Parallelization strategies using {future.apply} and {furrr}  
 - Progress handling with {progressr}  
 
-In addition, the project implements and analyzes two high-dimensional statistics:
+The project implements and analyzes two high-dimensional statistics:
 
-### T₁ Statistic
+- **T1 Statistic**: based on the Moore–Penrose pseudoinverse of the sample covariance matrix.  
+  Includes eigen decomposition and construction of the pseudoinverse using non-zero eigenvalues.
 
-\[
-T_1 = \overline{X}^\top S^{+} \overline{X}
-\]
-
-where:
-- \(\overline{X}\) is the vector of column means  
-- \(S^{+}\) is the Moore–Penrose pseudoinverse of the sample covariance matrix  
-
-The implementation includes eigen decomposition and construction of the pseudoinverse using non-zero eigenvalues.
-
-### T₂ Statistic
-
-\[
-T_2 = \overline{X}^\top S_\alpha^{-1} \overline{X}
-\]
-
-where:
-- \(S_\alpha = (1 - \alpha)S + \alpha I\)  
-- \(\alpha\) is a shrinkage parameter  
-
-This version uses a shrinkage estimator to ensure invertibility and improve numerical stability.
+- **T2 Statistic**: based on a shrinkage estimator of the covariance matrix.  
+  The shrinkage parameter ensures numerical stability and invertibility.
 
 ## Computational Experiments
 
@@ -48,7 +30,7 @@ The project includes:
 - Parallel computation with {furrr}  
 - Visualization of the resulting distributions  
 
-The simulations involve high-dimensional matrices (n = 500, p = 1000), highlighting both computational and statistical challenges.
+Simulations involve high-dimensional matrices with hundreds of rows and columns, highlighting computational and statistical challenges.
 
 ## Technologies Used
 
