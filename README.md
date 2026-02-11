@@ -1,1 +1,1 @@
-# Parallel-computing-in-R-using-the-futureverse-for-high-dimensional-statistics.
+# Parallel Computing with R: Futureverse & High-Dimensional Statistics
